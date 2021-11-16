@@ -10,6 +10,10 @@ class NotificacaoOutput(BaseModel):
     conteudo: Optional[str]
     is_read: Optional[bool]
 
+    class Config:
+        orm_mode = True
+        arbitrary_types_allowed = True
+
 
 class BatchIdNotificacaoInput(BaseModel):
 

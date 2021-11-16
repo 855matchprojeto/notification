@@ -15,6 +15,7 @@ from server.constants.permission import RoleBasedPermission
 from server.configuration.environment import Environment
 from server.schemas import error_schema
 from server.schemas import notificacao_schema
+from typing import Optional
 
 
 router = APIRouter()
@@ -85,7 +86,7 @@ async def get_current_user(
 )
 @endpoint_exception_handler
 async def get_notifications_by_guid_usuario(
-    is_read: bool,
+    is_read: Optional[bool] = None,
     current_user: usuario_schema.CurrentUserToken = Security(get_current_user, scopes=[]),
     session: AsyncSession = Depends(get_session),
     environment: Environment = Depends(get_environment_cached),
