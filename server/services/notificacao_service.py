@@ -27,7 +27,7 @@ class NotificacaoService:
         filter_factory = NotificacaoService.get_filter_factory()
         for key in params_dict:
             param = params_dict[key]
-            if param:
+            if param is not None:
                 filters.extend(filter_factory[key](param))
         return filters
 
