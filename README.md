@@ -35,7 +35,12 @@ Apesar do microsserviço de autenticação ser responsável pela criação de us
 
 # Descrição
 
-O microsserviço de autenticação é responsável pela implementação do serviço de identificação de usuários. Além disso, são definidos tabelas para o banco de dados, tais como usuário, função e vínculo de usuários com funções. Como supracitado, o autenticador também definirá tabelas de permissões, específicas para esse microsserviço.
+O microsserviço de notificação é responsável basicamente por duas features principais:
+
+- Capturar notificações dos usuários, lidas ou não-lidas
+- Marcar notificações como lidas
+
+É essencialmente útil para as situações de match de projetos, em que notificações devem ser geradas ao longo do fluxo.
 
 # Aspectos Técnicos
 
