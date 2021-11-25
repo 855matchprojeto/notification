@@ -1,3 +1,30 @@
+# Universidade Estadual de Campinas
+# Instituto da Computação
+
+## Disciplina: MC855-2s2021
+
+#### Professor e Assistente
+
+| Nome                     | Email                   |
+| ------------------------ | ------------------------|
+| Professora Juliana Borin | jufborin@unicamp.br     |
+| Assistente Paulo Kussler | paulo.kussler@gmail.com |
+
+#### Equipe
+
+| Nome               | RA               | Email                  | ID Git                |
+| ------------------ | ---------------- | ---------------------- |---------------------- |
+| Gustavo Henrique Libraiz Teixeira                   | 198537                 | g198537@dac.unicamp.br                     |   nugnu                    |
+| Lucas Henrique Machado Domingues                   | 182557                 | l182557@dac.unicamp.br                    |   lhmdomingues                   ||                    |                  |                        |                       |
+| Matheus Vicente Mazon                   | 203609                | m203609@dac.unicamp.br                     |   matheusmazon                    |
+| Pietro Pugliesi                   | 185921               | p185921@dac.unicamp.br                     |   pietro1704                   |
+| Caio Lucas Silveira de Sousa                  | 165461                | c165461@dac.unicamp.br                     |   caiolucasw                    |
+| Thomas Gomes Ferreira                  | 224919                | t224919@dac.unicamp.br                     |   Desnord                   |
+
+# LINK DA API ATUAL
+
+https://notification-match-projetos.herokuapp.com/docs
+
 # Visão geral da arquitetura
 
 A arquitetura do back-end será definida em microsserviços. Ao contrário de uma arquitetura convencional monolítica, a aplicação em microsserviços é desmembrada em partes menores e independentes entre si.
