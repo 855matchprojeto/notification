@@ -21,9 +21,8 @@
 | Caio Lucas Silveira de Sousa                  | 165461                | c165461@dac.unicamp.br                     |   caiolucasw                    |
 | Thomas Gomes Ferreira                  | 224919                | t224919@dac.unicamp.br                     |   Desnord                   |
 
-# LINK DA API ATUAL
-
-https://notification-match-projetos.herokuapp.com/docs
+## Específico sobre esse repositório:
+Esse repositório faz parte do projetos da plataforma de Match de Projetos desenvolvido no 2s/2021 para a disciplina MC-855 na Unicamp: https://github.com/orgs/855matchprojeto/repositories.
 
 # Visão geral da arquitetura
 
