@@ -1,10 +1,8 @@
-from server.configuration import exceptions
-from jose import jwt
 from typing import List, Optional
-from fastapi import Request
 from server.configuration.environment import Environment
 from server.repository.notificacao_repository import NotificacaoRepository
 from server.models.notificacao_model import Notificacao
+from server.schemas.notificacao_schema import NotificacaoInput
 
 
 class NotificacaoService:
@@ -49,4 +47,7 @@ class NotificacaoService:
     async def batch_read_notifications(self, guid_usuario: str, ids_notificacoes: List[int]):
         notificacoes_updated = await self.notificacao_repo.batch_read_notification(guid_usuario, ids_notificacoes)
         return notificacoes_updated
+
+    async def insert_notification(self, notificacao_input: NotificacaoInput):
+        return await self.notificacao_repo.insert_notification(notificacao_input.dict())
 

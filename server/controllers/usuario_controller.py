@@ -1,5 +1,5 @@
-from server.schemas import usuario_schema, token_shema
-from fastapi import APIRouter, Request, Response
+from server.schemas import usuario_schema
+from fastapi import APIRouter
 from server.services.usuario_service import UsuarioService
 from server.repository.notificacao_repository import NotificacaoRepository
 from server.services.notificacao_service import NotificacaoService
@@ -8,10 +8,8 @@ from server.dependencies.get_environment_cached import get_environment_cached
 from server.configuration.db import AsyncSession
 from fastapi import Depends, Security
 from server.controllers import endpoint_exception_handler
-from fastapi.security import OAuth2PasswordRequestForm
 from typing import List
 from server.dependencies.get_current_user import get_current_user
-from server.constants.permission import RoleBasedPermission
 from server.configuration.environment import Environment
 from server.schemas import error_schema
 from server.schemas import notificacao_schema
