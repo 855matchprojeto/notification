@@ -1,5 +1,5 @@
 from server.models.notificacao_model import Notificacao
-from sqlalchemy import select, update, literal_column
+from sqlalchemy import select, update, insert, literal_column
 from server.configuration.db import AsyncSession
 from typing import Optional
 from server.configuration.environment import Environment
@@ -41,4 +41,17 @@ class NotificacaoRepository:
         query = await self.db_session.execute(stmt)
         notificacoes = [Notificacao(**dict(row)) for row in query.fetchall()]
         return notificacoes
+
+    async def insert_notification(self, notification_dict: dict) -> Notificacao:
+        stmt = (
+            insert(Notificacao).
+            returning(literal_column('*')).
+            values(
+                **notification_dict
+            )
+        )
+
+        query = await self.db_session.execute(stmt)
+        row_to_dict = dict(query.fetchone())
+        return Notificacao(**row_to_dict)
 
